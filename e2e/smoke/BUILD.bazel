@@ -12,6 +12,7 @@ py_pytest_test(
     srcs = ["test.py"],
     deps = [
         requirement("pytest"),
+        requirement("slipcover"),
     ],
 )
 
@@ -23,6 +24,7 @@ py_pytest_test(
     deps = [
         requirement("pytest"),
         requirement("pytest-shard"),
+        requirement("slipcover"),
     ],
 )
 

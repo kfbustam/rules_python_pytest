@@ -64,5 +64,8 @@ if __name__ == "__main__":
     else:
         pytest_args.extend(args)
 
+    if os.environ.get("ENABLE_SLIPCOVER"):
+        pytest_args = ["-m", "slipcover", "-m", "pytest"] + pytest_args
+
     print(pytest_args, file=sys.stderr)
     raise SystemExit(pytest.main(pytest_args))
